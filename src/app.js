@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast')
 
 // Now app is Express
 const app = express()
+const port = process.env.PORT || 3000
 
 // html -> static, views(hbs) -> dynamic, partials -> share between pages
 
@@ -105,6 +106,6 @@ app.get('*', (req, res) => {
 })
 
 // Set up the server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
